@@ -2,29 +2,39 @@ import React, { useState } from "react";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { UserAuth } from "../context/AuthContext";
 import { db } from "../firebase";
-import {arrayUnion, doc, updateDoc} from 'firebase/firestore'
+import {collection, doc, addDoc} from 'firebase/firestore'
 
 const Movie = ({ movie }) => {
   const [like, setLike] = useState(false);
   const [saved, setSaved] = useState(false)
   const {user} = UserAuth()
-  const movieID = doc(db, 'users', `${user?.email}`)
+  // const movieID = doc(db, 'users', `${user?.email}`)
 
   const saveMovie = async () => {
     if(user?.email){
       setLike(!like)
       setSaved(true)
-      await updateDoc(movieID, {
-        savedMovie: arrayUnion ({
-          id: movie.id,
-          title: movie.title,
-          img: movie.background_path
-        })
-      })
+     const docRef = await addDoc( collection(db,"users",`${user?.email}`,"savedMovies"),{ 
+      savedMovies: {
+        id:movie.id,
+        title:movie.title,
+        img:movie.backdrop_path}
+     })
+console.log(movie)
+
+      // await addDoc(movieID, {
+      //   savedMovies: arrayUnion ({
+      //     id: movie.id,
+      //     title: movie.title,
+      //     img: movie.background_path
+      //   })
+      // })
     } else {
       alert("Please log in to save a movie")
     }
   }
+
+
 
   return (
     <div className="w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block cursor-pointer relative p-2">
