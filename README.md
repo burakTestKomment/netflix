@@ -8,8 +8,7 @@ It is an example of how React, React Router and Firebase works by copying Netfli
 App enables to user to see one of the movie from recent popular movies on home page randomly, after logged in user can search a movie and see its details.
 
 ## Screenshots
-![Main](../../Ekran%20Resmi%202023-03-17%2011.42.44.png)
-![Categories](../../Ekran%20Resmi%202023-03-17%2011.42.59.png)
+
 ## Tech/framework used
 
 <b>Built with</b> <br>
