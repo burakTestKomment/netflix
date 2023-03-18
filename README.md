@@ -3,7 +3,7 @@
 # Netlix App
 
 ## Motivation
-It is an example of how React, React Router and Firebase works by copying Netflix App.
+It is an example of how React, React Router and Firebase and Firestore Database works by copying Netflix.
 <br>
 App enables to user to see one of the movie from recent popular movies on home page randomly, after logged in user can search a movie and see its details.
 
@@ -23,6 +23,7 @@ With hover effect without logged in user can see the movie overview.<br>
 Login to search movies. <br>
 After logged in click movie images to go the detail page.<br>
 Watch the trailer.
+Saved movies are stored in the Firestore Database.
 
 ## Code style
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
