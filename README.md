@@ -8,7 +8,7 @@ It is an example of how React, React Router and Firebase and Firestore Database 
 App enables to user to see one of the movie from recent popular movies on home page randomly, after logged in user can saved a movie and see tem in account page.
 
 ## Screenshots
-
+![netf](https://user-images.githubusercontent.com/118957608/226092423-9d9cd68f-75e2-42b1-8597-0807c882522a.gif)
 ## Tech/framework used
 
 <b>Built with</b> <br>
