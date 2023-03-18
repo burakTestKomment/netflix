@@ -6,10 +6,14 @@ const Home = () => {
   return (
     <>
       <Main/>
-      <Row rowID="1" title='UpComing' fetchURL={requests?.requestUpcoming} />
+      {requests.map((r,index) => (
+        <Row title={r.title} rowID={index} key={index} fetchURL={r.url} />
+      ))}
+          console.log(rowID)
+      {/* <Row rowID="1" title='UpComing' fetchURL={requests?.requestUpcoming} />
       <Row rowID="2" title='Popular' fetchURL={requests?.requestPopular} />
       <Row rowID="3" title='Top Rated' fetchURL={requests?.requestTopRated} />
-      <Row rowID="4" title='Horror' fetchURL={requests?.requestHorror} />
+      <Row rowID="4" title='Horror' fetchURL={requests?.requestHorror} /> */}
     </>
   )
 }

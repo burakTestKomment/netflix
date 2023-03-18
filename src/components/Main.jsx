@@ -5,14 +5,16 @@ import axios from "axios";
 const Main = () => {
   const [movies, setMovies] = useState([]);
 
-  const movie = movies[Math.floor(Math.random() * movies.length)];
-
   useEffect(() => {
-    axios
-      .get(requests.requestPopular)
-      .then((response) => setMovies(response.data.results));
+    getDataFromApi();
   }, []);
 
+  const getDataFromApi = async () => {
+    const { data } = await axios.get(requests[0].url);
+    setMovies(data.results);
+  };
+
+  const movie = movies[Math.floor(Math.random() * movies.length)];
 
   const truncateString = (str, num) => {
     if (str?.length > num) {
@@ -45,7 +47,7 @@ const Main = () => {
             Released: {movie?.release_date}
           </p>
           <p className="w-full md:max-w-[70%] lg:max-w-[50%] xl:max-w-[35%] text-gray-200 ">
-            {truncateString(movie?.overview,150)}
+            {truncateString(movie?.overview, 150)}
           </p>
         </div>
       </div>
