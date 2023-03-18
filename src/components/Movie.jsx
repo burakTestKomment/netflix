@@ -15,10 +15,7 @@ const Movie = ({ movie }) => {
     if(user?.email){
       setLike(!like)
       setSaved(true)
-    
-      console.log('movie:', movie);
-      console.log('movie.backdrop_path:', movie.backdrop_path);
-  
+ 
       await updateDoc(movieID, {
         savedMovies: arrayUnion ({
           id: movie.id,
