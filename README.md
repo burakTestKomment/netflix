@@ -5,7 +5,7 @@
 ## Motivation
 It is an example of how React, React Router and Firebase and Firestore Database works by copying Netflix.
 <br>
-App enables to user to see one of the movie from recent popular movies on home page randomly, after logged in user can search a movie and see its details.
+App enables to user to see one of the movie from recent popular movies on home page randomly, after logged in user can saved a movie and see tem in account page.
 
 ## Screenshots
 
