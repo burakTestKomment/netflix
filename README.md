@@ -20,10 +20,10 @@ https://www.themoviedb.org/documentation/api
 
 ## How to use?
 With hover effect without logged in user can see the movie overview.<br>
-Login to search movies. <br>
-After logged in click movie images to go the detail page.<br>
-Watch the trailer.
-Saved movies are stored in the Firestore Database.
+Login to add your favourite movies to your account page. <br>
+After logged in click the heart icon to save movies.<br>
+Go to Account page to see your favourites.
+Delete your favourites by clicking X icon.
 
 ## Code style
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
