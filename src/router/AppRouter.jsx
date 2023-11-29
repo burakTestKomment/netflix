@@ -8,6 +8,15 @@ import Login from "../pages/Login";
 import Account from "../pages/Account";
 //
 
+/**
+* @description This function is a higher-order component (HOC) that wraps another
+* component with an authentication context provider and routes.
+* 
+* @returns {  } The output returned by this function is a JSX element representing
+* the main component of an app's routes. It is a wrapper component that provides
+* authentication context and routes for four different pages: Home , Login , Register
+* , and Account .
+*/
 const AppRouter = () => {
   return (
     <>
