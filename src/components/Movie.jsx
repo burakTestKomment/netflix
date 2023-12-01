@@ -4,12 +4,28 @@ import { UserAuth } from "../context/AuthContext";
 import { db } from "../firebase";
 import { arrayUnion, doc, updateDoc } from "firebase/firestore";
 
+/**
+* @description This function renders a movie card with a heart button that saves the
+* movie to the user's liked list when clicked.
+* 
+* @returns { Component } The output returned by this React functional component is
+* adiv containing an image and some text that displays the movie title and a heart
+* button.
+*/
 const Movie = ({ movie }) => {
   const [like, setLike] = useState(false);
   const [saved, setSaved] = useState(false);
   const { user } = UserAuth();
   const movieID = doc(db, "users", `${user?.email}`);
 
+/**
+* @description This function saves a movie to the user's saved movies list if they
+* are logged In and returns an alert if not logged In.
+* 
+* @returns { any } The `saveMovie` function takes no arguments and returns nothing
+* (void) since it's an asynchronous function that only updates the Firestore document
+* with the user's saved movies.
+*/
   const saveMovie = async () => {
     if (user?.email) {
       setLike(!like);
